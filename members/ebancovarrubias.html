@@ -20,23 +20,16 @@
 
     <section>
       <h2>About Me</h2>
-      <!-- TODO: replace with real bio -->
       <p>
         I'm a student in CSE 135, currently learning the ropes of Linux servers,
         Apache configuration, and deploying real websites instead of just running
-        things on localhost. Outside of class I like
-        <!-- e.g., "rock climbing, cooking, and losing to my friends at chess" --> ...
+        things on localhost. Outside of class I enjoy rock climbing, lifting
+        weights, and gaming.
       </p>
     </section>
 
     <section>
       <h2>Fun Facts</h2>
-      <ul id="fact-list">
-        <!-- TODO: swap these for real facts about yourself -->
-        <li>I once stayed up too late debugging a DNS propagation issue.</li>
-        <li>My favorite thing about servers is pretending I know what I'm doing.</li>
-        <li>Ask me about the time I locked myself out of a droplet.</li>
-      </ul>
       <button id="fact-btn" type="button">Show me a random fact</button>
       <p id="fact-output" aria-live="polite"></p>
     </section>
@@ -56,7 +49,22 @@
   </footer>
 
   <script>
-    const facts = Array.from(document.querySelectorAll('#fact-list li')).map(li => li.textContent);
+    const facts = [
+      'I have 5 herniated discs.',
+      "I'm currently reading Tokyo Ghoul.",
+      'I can play guitar.',
+      'My favorite artist right now is Nujabes.',
+      'I love Mario Kart.',
+      "I'm lactose intolerant.",
+      "I'm actually a master's student taking this class.",
+      'I can play the trumpet.',
+      'My glasses prescription is -3.',
+      'I have a younger sister.',
+      'I like to do Spelunky 2 speedruns.',
+      'My zodiac sign is Taurus.',
+      'I live in a 1200 square foot apartment.',
+      'Red Velvet Cake is my favorite.',
+    ];
     const output = document.getElementById('fact-output');
     document.getElementById('fact-btn').addEventListener('click', () => {
       const pick = facts[Math.floor(Math.random() * facts.length)];
