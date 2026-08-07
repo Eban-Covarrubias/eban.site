@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eban Covarrubias &mdash; CSE 135</title>
+  <meta name="description" content="Personal page for Eban Covarrubias, CSE 135.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main>
+    <a class="back-link" href="/index.html">&larr; Back to team home</a>
+
+    <header style="text-align:left; border:none; padding:0 0 1.5rem;">
+      <h1>Eban Covarrubias</h1>
+      <p><!-- TODO: one-line tagline about yourself --> CSE 135 student, figuring out servers one droplet at a time.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <!-- TODO: replace with real bio -->
+      <p>
+        I'm a student in CSE 135, currently learning the ropes of Linux servers,
+        Apache configuration, and deploying real websites instead of just running
+        things on localhost. Outside of class I like
+        <!-- e.g., "rock climbing, cooking, and losing to my friends at chess" --> ...
+      </p>
+    </section>
+
+    <section>
+      <h2>Fun Facts</h2>
+      <ul id="fact-list">
+        <!-- TODO: swap these for real facts about yourself -->
+        <li>I once stayed up too late debugging a DNS propagation issue.</li>
+        <li>My favorite thing about servers is pretending I know what I'm doing.</li>
+        <li>Ask me about the time I locked myself out of a droplet.</li>
+      </ul>
+      <button id="fact-btn" type="button">Show me a random fact</button>
+      <p id="fact-output" aria-live="polite"></p>
+    </section>
+
+    <section>
+      <h2>Find Me</h2>
+      <ul>
+        <!-- TODO: add real links -->
+        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:ebancovarrubias@gmail.com">Email</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Part of the <a href="/index.html">CSE 135 team site</a></p>
+  </footer>
+
+  <script>
+    const facts = Array.from(document.querySelectorAll('#fact-list li')).map(li => li.textContent);
+    const output = document.getElementById('fact-output');
+    document.getElementById('fact-btn').addEventListener('click', () => {
+      const pick = facts[Math.floor(Math.random() * facts.length)];
+      output.textContent = pick;
+    });
+  </script>
+</body>
+</html>
