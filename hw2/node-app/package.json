@@ -1,0 +1,14 @@
+{
+  "name": "hw2-node-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CSE 135 HW2 Node/Express demo, reverse-proxied by Apache at /hw2/node/",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0"
+  }
+}
