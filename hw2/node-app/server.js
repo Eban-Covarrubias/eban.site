@@ -13,7 +13,6 @@ app.use(
     secret: "cse135-hw2-node-demo-secret",
     resave: false,
     saveUninitialized: true,
-    cookie: { path: "/hw2/node/" },
   })
 );
 
