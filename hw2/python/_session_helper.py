@@ -9,7 +9,7 @@ import json
 import uuid
 import http.cookies
 
-SESSION_DIR = "/var/tmp/hw2-python-sessions"
+SESSION_DIR = "/var/lib/hw2-python-sessions"
 COOKIE_NAME = "hw2py_sid"
 
 
