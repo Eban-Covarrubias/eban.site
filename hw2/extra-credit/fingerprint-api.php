@@ -5,6 +5,7 @@ header("Content-Type: application/json");
 $dataDir = "/var/lib/hw2-fingerprint-demo";
 $dataFile = $dataDir . "/records.json";
 $cookieName = "fp_demo_sid";
+$maxRecords = 100;
 
 function load_records($dataFile) {
     if (!file_exists($dataFile)) {
@@ -121,6 +122,11 @@ if ($action === 'save') {
             'note' => $note,
             'savedAt' => $now,
         ];
+        // Records are appended in order, so the oldest ones are always at
+        // the front - trim there once we're over the cap.
+        if (count($records) > $maxRecords) {
+            $records = array_slice($records, count($records) - $maxRecords);
+        }
     }
 
     save_records($dataFile, $records);
